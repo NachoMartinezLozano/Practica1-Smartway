@@ -1,5 +1,5 @@
 :root{
-    text-align: center;
+    
     background-color: gray;
 }
 
@@ -16,4 +16,17 @@ header img{
     height: 100px;
     margin: 10px;
     box-align: center;
+}
+p{
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+    color: linen;
+}
+i{
+    width: 70px;
+    height: 70px;
 }
