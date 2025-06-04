@@ -1,1 +1,1 @@
-# Pr-ctica1-Smartway
+# Practica1-Smartway
