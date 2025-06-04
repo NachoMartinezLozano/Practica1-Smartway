@@ -13,6 +13,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 button{
@@ -74,9 +75,11 @@ i{
 }
 
 .grid-container{
-    display: grid;
-    grid-template-rows: 1;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -101,12 +104,13 @@ i{
     background-color: lightgray;
 }
 
-nav dl{
+nav ul{
     display: flex;
     flex-direction: row;
     gap: 1rem;
     padding: 0px;
     justify-content: center;
+    list-style-type: none;
 }
 
 .flex-review{
@@ -122,7 +126,8 @@ nav dl{
     padding: 20px;
     width: 100%;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3 ease, background-color 0.3s ease, border 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3 ease, background-color 0.3s ease;
+    width: 50%;
 }
 
 .flex-review > div:hover{
@@ -141,12 +146,17 @@ footer{
     padding: 20px;
 }
 
-footer section{
+.redes-sociales{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: flex-start;
-    left: 40px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+footer a{
+    text-decoration: none;
+    width: 12px;
 }
 
 footer p{
