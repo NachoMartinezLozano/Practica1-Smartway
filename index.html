@@ -15,21 +15,27 @@
         />
     </head>
     <body>
-        <header>
+        
+        <header class="container">
             <h1>CyberPulse Labs</h1>
             <img src="imagenes/images.png" alt="CyberPulse Labs Logo" width="200">
-            <nav>
-                <dl>
-                    <dt><a href="#home">Home</a></dt>
-                    <dt><a href="#monitoreo">Monitoreo</a></dt>
-                    <dt><a href="#analisis">Análisis</a></dt>
-                    <dt><a href="#respuesta">Respuesta</a></dt>
-                    <dt><a href="#redes-sociales">Contacta con nosotros</a></dt>
-                </dl>
-            </nav>   
+            <div class="elementos-header">
+                <nav>
+                    <dl>
+                        <dt><a href="#home">Home</a></dt>
+                        <dt><a href="#monitoreo">Monitoreo</a></dt>
+                        <dt><a href="#analisis">Análisis</a></dt>
+                        <dt><a href="#respuesta">Respuesta</a></dt>
+                        <dt><a href="#redes-sociales">Contacta con nosotros</a></dt>
+                    </dl>
+                </nav>
+            
+               <button id="boton-modo-oscuro">Modo Oscuro</button>
+            </div>
+            
         </header>
         
-        <main>
+        <main class="container">
             <section id="home">
                 <h2>Bienvenido</h2>
                 <p>En CyberPulse Labs nos preocupamos por la seguridad de tu sistema.</p>
@@ -84,7 +90,7 @@
             </section>
 
         </main>
-        <footer>
+        <footer class="container">
             <p>&copy; 2025 CyberPulse Labs</p>
             <p>Nuestras redes sociales:</p>
             <section id="redes-sociales">
@@ -99,4 +105,7 @@
                 </a>
             </section>
         </footer>
+
+        <script src="script.js"></script>
+    </body> 
 </html>

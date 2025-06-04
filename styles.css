@@ -1,5 +1,32 @@
-:root{
-    background-color: gray;
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.elementos-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button{
+    margin: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #0056b3;
 }
 
 header h1{
@@ -18,15 +45,28 @@ header img{
     margin: 0 auto;
 }
 
+body{
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s;
+}
+
+body.modo-oscuro{
+    background-color: #000000;
+    color: #ffffff;
+}
+
 p{
     font-size: 16px;
+
     font-family:'Times New Roman', Times, serif;
 }
 
 a{
     text-decoration: none;
-    color: linen;
+    color: #0056b3;
 }
+
 
 i{
     width: 70px;
@@ -78,6 +118,20 @@ nav dl{
     margin-top: 20px;
 }
 
+.flex-review > div{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3 ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.flex-review > div:hover{
+    border: black solid 3px;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #d3d3d3;
+}
+
 footer{
     display: flex;
     flex-direction: column;
@@ -100,3 +154,4 @@ footer p{
     text-align: center;
     font-size: 14px;
 }
+
