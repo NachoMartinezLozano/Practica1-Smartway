@@ -46,6 +46,18 @@ header img{
     margin: 0 auto;
 }
 
+header.sticky{
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+section[id]{
+    scroll-margin-top: 300px;
+}
+
 body{
     background-color: #ffffff;
     color: #000000;
@@ -55,6 +67,10 @@ body{
 body.modo-oscuro{
     background-color: #000000;
     color: #ffffff;
+}
+
+body.modo-oscuro header.sticky{
+    background-color: #000000;
 }
 
 p{
