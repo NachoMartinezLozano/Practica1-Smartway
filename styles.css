@@ -156,6 +156,31 @@ footer{
     flex-wrap: nowrap;
 }
 */
+
+#scroll-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+}
+
+#scroll-top.show{
+    display: block;
+    opacity: 1;
+}
+
+#scroll-top:hover{
+    background-color: #0056b3;
+}
+
 footer i{
     text-decoration: none;
     width: auto;
@@ -164,6 +189,12 @@ footer i{
     align-items: stretch;
     flex-direction: row;
     padding: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer i:hover{
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }
 
 footer p{
