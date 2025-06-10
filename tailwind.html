@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--<link rel="stylesheet" href="styles.css">-->
+        <link
+            href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        />
+
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body class="bg-white text-black transition-colors duration-500 ease-in-out dark:bg-black dark:text-white">
+        
+        <header class="container flex flex-col justify-center items-center p-[20px] sticky top-0 bg-white shadow-sm z-1000 dark:bg-black dark:text-white">
+            <h1 class="text-blue-500 text-[24px] font-serif mt-[20px] mb-[20px] text-center">CyberPulse Labs</h1>
+            <img src="imagenes/images.png" alt="CyberPulse Labs Logo" width="200" class="w-[100px] h-[100px] block mx-auto my-0">
+            <div class="elementos-header flex flex-row justify-center items-center g-[20px] flex-wrap">
+                <nav>
+                    <ul class="flex flex-row justify-center gap-4 p-0 list-none">
+                        <li><a class="no-underline text-blue-700" href="#home">Home</a></li>
+                        <li><a class="no-underline text-blue-700" href="#monitoreo">Monitoreo</a></li>
+                        <li><a class="no-underline text-blue-700" href="#analisis">Análisis</a></li>
+                        <li><a class="no-underline text-blue-700" href="#respuesta">Respuesta</a></li>
+                        <li><a class="no-underline text-blue-700" href="#redes-sociales">Contacta con nosotros</a></li>
+                    </ul>
+                </nav>
+            
+               <label class="swap swap-rotate">
+                    <!-- this hidden checkbox controls the state -->
+                    <input type="checkbox" id="modo-oscuro-toggle"/>
+
+                    <!-- sun icon -->
+                    <svg
+                        class="swap-on h-10 w-10 fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                        <path
+                        d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+
+                    <!-- moon icon -->
+                    <svg
+                        class="swap-off h-10 w-10 fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                        <path
+                        d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </div>
+            
+        </header>
+        
+        <main class="container">
+            <section id="home">
+                <h2>Bienvenido</h2>
+                <p class="text-base text-gray-500 font-serif">En CyberPulse Labs nos preocupamos por la seguridad de tu sistema.</p>
+                <p class="text-base text-gray-500 font-serif">Ofrecemos servicios de ciberseguridad de alta calidad.</p>
+                <p class="text-base text-gray-500 font-serif">¡Te necesitamos! Si quieres formar parte de nuestro equipo, no dudes en contactar con nosotros en las plataformas proporcionadas.</p>
+            </section>
+            <section class="grid-container flex flex-row justify-center items-center gap-2.5 flex-wrap">
+                
+                <div class="grid-monitoreo text-center p-[10px] border-3 border-black bg-gray-200 max-w-[300px]">
+                    <section id="monitoreo">
+                        <h2>Monitoreo de Seguridad</h2>
+                        <p class="text-base text-gray-500 font-serif">Implementamos sistemas avanzados de monitoreo para proteger tu red.</p>
+                    </section>
+                </div>
+                
+                <div class="grid-analisis text-center p-[10px] border-3 border-black bg-gray-200 max-w-[300px]">
+                    <section id="analisis">
+                        <h2>Análisis de Amenazas</h2>
+                        <p class="text-base text-gray-500 font-serif">Realizamos análisis exhaustivos para identificar vulnerabilidades.</p>
+                    </section>
+                </div>
+                
+                <div class="grid-respuesta text-center p-[10px] border-3 border-black bg-gray-200 max-w-[300px]">
+                    <section id="respuesta">
+                        <h2>Respuesta a Incidentes</h2>
+                        <p class="text-base text-gray-500 font-serif">Nuestro equipo está preparado para responder rápidamente a cualquier incidente de seguridad.</p>
+                    </section>
+                </div>
+            
+            </section>
+            <section id="review">
+                <h2>Reseñas</h2>
+                <p class="text-base text-gray-500 font-serif">CyberPulse Labs cuenta con muchos años de experiencia en el mercado de la seguridad digital.</p>
+                <p class="text-base text-gray-500 font-serif">Miles han sido las personas que han podido disfrutar de nuestros servicios y de una estancia segura en el mundo digital.</p>
+                <p class="text-base text-gray-500 font-serif">Lo más importante para poder desempeñar nuestro trabajo tan bien todos los días es sin duda nuestros trabajadores.
+                    Contamos con un equipo de cientos de profesionales altamente cualificados desplegados por todo el mundo, listos para ayudar a nuestros clientes en cualquier momento y lugar.
+                </p>
+                <p class="text-base text-gray-500 font-serif">Valoramos enormemente los servicios ofrecidos por nuestros trabajadores, y es por eso que nos esforzamos día a día por su bienestar.</p>
+
+                <div class="flex-review grid grid-cols-2 gap-5 items-center justify-items-center mt-5">
+                    <div id="review-pedro" class="p-5 w-1/2 text-center transition duration-500 ease-in-out transform hover:border-3 hover:border-black hover:-translate-y-[10px] hover:shadow-[0_8px_16px_rgba(0,0,0,0.3)] hover:bg-gray-300">
+                        <h3>Agente Pedro Martínez</h3>
+                        <p class="text-base text-gray-500 font-serif">"No puedo estar más contento de trabajar aquí. Gracias a los servicios que proporcionamos miles de empresas pueden estar seguras en Internet."</p>
+                    </div>
+
+                    <img src="imagenes/avatarHombre.jfif" alt="Avatar de Pedro Martínez" width="100">
+
+                    <img src="imagenes/avatarMujer.jpg" alt="Avatar de Luisa González" width="100">
+
+                    <div id="review-luisa" class="p-5 w-1/2 text-center transition duration-500 ease-in-out transform hover:border-3 hover:border-black hover:-translate-y-[10px] hover:shadow-[0_8px_16px_rgba(0,0,0,0.3)] hover:bg-gray-300">
+                        <h3>Agente Luisa González</h3>
+                        <p class="text-base text-gray-500 font-serif">"La antigua empresa para la que trabajaba disponía de los servicios ofrecidos por CyberPulse Labs. Gracias al fantástico servicio y la tan buena experiencia, finalmente me termine decidiendo por venir aquí. ¡De las mejores decisiones de mi vida!"</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+        <footer class="container flex flex-col justify-center items-center p-[20px] g-[20px] w-100%">
+            <p class="m-0 text-center text-sm">&copy; 2025 CyberPulse Labs</p>
+            <p class="text-sm text-gray-500 font-serif m-0 text-center ">Nuestras redes sociales:</p>
+            <div id="redes-sociales">
+                <a class="no-underline text-blue-700" href="https://www.instagram.com/umu/" target="_blank">
+                    <i class="fab fa-instagram w-[70px] h-[70px] flex justify-evenly items-stretch flex-row p-10 transition duration-300 ease-in-out transform hover:scale-120 hover:brightness-125"></i>
+                </a>
+                <a class="no-underline text-blue-700" href="https://www.facebook.com/universidadmurcia/?locale=es_ES" target="_blank">
+                    <i class="fab fa-facebook-f w-[70px] h-[70px] flex justify-evenly items-stretch flex-row p-10 transition duration-300 ease-in-out transform hover:scale-120 hover:brightness-125"></i>
+                </a>
+                <a class="no-underline text-blue-700" href="https://x.com/UMU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                    <i class="fab fa-twitter w-[70px] h-[70px] flex justify-evenly items-stretch flex-row p-10 transition duration-300 ease-in-out transform hover:scale-120 hover:brightness-125"></i>
+                </a>
+            </div>
+        </footer>
+        <button id="scroll-top" class="fixed bottom-5 right-5 hidden py-2.5 px-3.5 bg-blue-600 text-white border-none rounded-full cursor-pointer text-lg transition-opacity duration-300 ease-in-out hover:bg-blue-700">↑</button>
+
+        <script src="scripts/script.js"></script>
+        <script src="scripts/hover.js"></script>
+        <script src="scripts/scrolltop.js"></script>
+    </body> 
+</html>
