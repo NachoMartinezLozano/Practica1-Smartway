@@ -1,4 +1,4 @@
 
-document.getElementById('boton-modo-oscuro').addEventListener('click', () => {
-    document.body.classList.toggle('modo-oscuro');
+document.getElementById('modo-oscuro-toggle').addEventListener('change', () => {
+    document.body.classList.toggle('dark');
 });
