@@ -18,13 +18,19 @@
         
         <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-       
 
+        <!--
+             <style type="text/tailwindcss">      
+                @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+            </style>
+        -->
+       
+       
     </head>
     <body data-theme="dark" class="bg-white text-black transition-colors duration-500 ease-in-out dark:bg-black dark:text-white">
         
-        <header class="container flex flex-col justify-center items-center py-4 sticky top-0 bg-white shadow-sm z-1000 dark:bg-black dark:text-white">
-            <h1 class="text-blue-500 text-[24px] font-serif mt-[20px] mb-[20px] text-center">CyberPulse Labs</h1>
+        <header id="main-header" class="container flex flex-col justify-center items-center py-4 top-0 bg-white z-1000 dark:bg-black dark:text-white">
+            <h1 class="text-blue-500 text-[30px] font-serif mt-[20px] mb-[20px] text-center">CyberPulse Labs</h1>
             <img src="imagenes/images.png" alt="CyberPulse Labs Logo" class="w-[100px] h-[100px] block mx-auto my-0">
             <div class="elementos-header flex flex-row justify-center items-center g-[20px] flex-wrap">
                 <nav>
@@ -62,10 +68,48 @@
             </div>
             
         </header>
+
+        <!--Navbar escondido que se despliega cuando bajamos dentro de la página-->
+        <nav class="navbar bg-base-100 shadow-sm fixed top-0 w-full z-50 opacity-0 translate-y-[-100%] transition-all duration-300 ease-in-out" id="sticky-nav">
+            <div class="navbar-start">
+                <div class="dropdown text-blue-500">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#monitoreo">Monitoreo</a></li>
+                        <li><a href="#analisis">Análisis</a></li>
+                        <li><a href="#respuesta">Respuesta</a></li>
+                        <li><a href="#redes-sociales">Contacta con nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <a class="btn btn-ghost text-xl text-blue-500">CyberPulse Labs</a>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-ghost btn-circle text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <button class="btn btn-ghost btn-circle text-blue-500">
+                    <div class="indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                        </svg>
+                        <span class="badge badge-xs badge-primary indicator-item"></span>
+                    </div>
+                </button>
+            </div>
+        </nav>
         
         <main class="container">
-            <section id="home" class="scroll-mt-[330px]">
-                <h2>Bienvenido</h2>
+            <section id="home" class="scroll-mt-[330px] py-4">
+                <h2 class="text-2xl font-serif font-semibold text-center text-blue-500 uppercase tracking-wide">Bienvenido</h2>
                 <p class="text-base text-gray-500 font-serif">En CyberPulse Labs nos preocupamos por la seguridad de tu sistema.</p>
                 <p class="text-base text-gray-500 font-serif">Ofrecemos servicios de ciberseguridad de alta calidad.</p>
                 <p class="text-base text-gray-500 font-serif">¡Te necesitamos! Si quieres formar parte de nuestro equipo, no dudes en contactar con nosotros en las plataformas proporcionadas.</p>
@@ -94,8 +138,8 @@
                 </div>
             
             </section>
-            <section id="review" class="scroll-mt-[320px]">
-                <h2>Reseñas</h2>
+            <section id="review" class="scroll-mt-[320px] py-4">
+                <h2 class="text-2xl font-serif font-semibold text-center text-blue-500 uppercase tracking-wide">Reseñas</h2>
                 <p class="text-base text-gray-500 font-serif">CyberPulse Labs cuenta con muchos años de experiencia en el mercado de la seguridad digital.</p>
                 <p class="text-base text-gray-500 font-serif">Miles han sido las personas que han podido disfrutar de nuestros servicios y de una estancia segura en el mundo digital.</p>
                 <p class="text-base text-gray-500 font-serif">Lo más importante para poder desempeñar nuestro trabajo tan bien todos los días es sin duda nuestros trabajadores.
@@ -122,9 +166,15 @@
 
             </section>
 
-            <section id="logros">
-                <h2>Logros de la empresa</h2>
-                <p>A lo largo de nuestros años en el mundo profesional, hemos ido creciendo</p>
+            <section id="logros" class="py-4">
+                <h2 class="text-2xl font-serif font-semibold text-center text-blue-500 uppercase tracking-wide">Logros de la empresa</h2>
+                <p>Nuestro objetivo como empresa es ir creciendo día a día y ser capaces de proporcionar los mejores servicios posibles a nuestros clientes.</p>
+                <p class="py-2">Nuestra preocupación por la calidad nos llevó a conseguir el premio a <a class="no_underline text-blue-700" href="#slide1" >Mejor Empresa Informática 2025</a>.</p>
+                <p>Contamos con un <a class="no_underline text-blue-700" href="#slide2">Gran Equipo de Profesionales de Todo el Mundo</a>, dispuestos a dar lo mejor de sí todos los días, </p>
+                <p>para que todos nuestros clientes puedan gozar de la mejor seguridad en Internet.</p>
+                <p class="pt-2">Nos preocupamos por el bienestar de nuestros clientes, y es por eso que siempre queremos lo más cerca posible de vosotros.</p>
+                <p>Por ello, a finales del año pasado abrimos nuestra <a class="no_underline text-blue-700" href="#slide3">Nueva Oficina</a> en el parque tecnológico de Londres, desde donde podremos ofrecer un servicio más cercano y personalizado a nuestros clientes.</p>
+                
             </section>
 
             <section id="carousel-imagenes" class="w-full flex justify-center items-center mt-10 mb-10">
