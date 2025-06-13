@@ -1,9 +1,51 @@
+
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('modo-oscuro-toggle').addEventListener('change', () => {
-        document.body.classList.toggle('dark');
+    const toggle = document.getElementById('modo-oscuro-toggle');
+    const html = document.documentElement;
+
+    // Función para aplicar el tema
+    function applyTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        console.log(`Tema aplicado: ${theme}`);
+        toggle.checked = theme === 'light';
+    }
+
+    // Comprobar la preferencia guardada o del sistema
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        applyTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    // Escuchar cambios en el toggle
+    toggle.addEventListener('change', () => {
+        const newTheme = toggle.checked ? 'light' : 'dark';
+        console.log(`Cambio de tema: ${newTheme}`);
+        applyTheme(newTheme);
     });
+
+    // Escuchar cambios en la preferencia del sistema
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+    
 });
 
+/*
+// Script para el modo oscuro
+document.addEventListener('DOMContentLoaded', function() {
+
+    function setModoOscuro(){
+        document.body.setAttribute('data-theme', 'dark');
+    }
+});
+*/
 
 // Fijar el scroll de la pantalla cuando nos vemos en el carousel de imágenes
 document.addEventListener('DOMContentLoaded', function() {
