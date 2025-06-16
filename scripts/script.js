@@ -37,16 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-/*
-// Script para el modo oscuro
-document.addEventListener('DOMContentLoaded', function() {
-
-    function setModoOscuro(){
-        document.body.setAttribute('data-theme', 'dark');
-    }
-});
-*/
-
 // Fijar el scroll de la pantalla cuando nos vemos en el carousel de imágenes
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.carousel .btn-circle').forEach(button => {
@@ -61,19 +51,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Navbar aparece cuando se hace scroll hacia abajo
+// Navbar y botón scrolltop aparece cuando se hace scroll hacia abajo
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const header = document.getElementById('main-header');
         const stickynav = document.getElementById('sticky-nav');
+        const scrollTopButton = document.getElementById('scroll-top');
         const headerBottom = header.offsetTop + header.offsetHeight - 50;
 
         if(window.pageYOffset > headerBottom){
             stickynav.classList.add('opacity-100', 'translate-y-0');
+            scrollTopButton.classList.add('opacity-100', 'translate-y-0');
             stickynav.classList.remove('opacity-0', 'translate-y-[-100%]');
+            scrollTopButton.classList.remove('opacity-0', 'translate-y-[-100%]');
         } else {
             stickynav.classList.add('opacity-0', 'translate-y-[-100%]');
+            scrollTopButton.classList.add('opacity-0', 'translate-y-[-100%]');
             stickynav.classList.remove('opacity-100', 'translate-y-0');
+            scrollTopButton.classList.remove('opacity-100', 'translate-y-0');
         }
     });
 });
